@@ -1,8 +1,13 @@
 from selenium import webdriver
 
-driver = webdriver.Firefox(executable_path="c:\seleniumBrowserDrivers\geckodriver.exe")
+class MyCodeModular:
+    browser = "Firefox"
 
-driver.get("https://www.amazon.es/")
+    def setBrowserConfig():
+        driver = webdriver.Firefox(executable_path="c:\seleniumBrowserDrivers\geckodriver.exe")
 
-driver.quit()
+    def runTest():
+        driver.get("https://www.amazon.es/")
+        driver.quit()
+
 
